@@ -1,0 +1,5 @@
+This directory contains predictions of each model, as well as an evaluation and counts of false positives and negatives at the end of each file.
+
+Error parameter in training was set to 'binary:hinge'
+
+Evaluation is calculated as (# wrong predictions)/(# total predictions).
