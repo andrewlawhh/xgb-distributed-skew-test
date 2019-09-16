@@ -16,13 +16,14 @@ can be found in ./scripts/train_model.py
 
 This dataset was downloaded from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing#)
 
-##### Results (run on local distributed XGBoost over 4 worker nodes and 1 tracker with dummy data)
+
+#### Results (run on local distributed XGBoost over 4 worker nodes and 1 tracker with dummy data)
 
 **Control (No skew)**
 eval-error:0.245060
 {'false_positives': 490, 'false_negatives': 2834, 'total predictions': 13564}
 
-**Label Skew **
+**Label Skew**
 eval-error:0.246461
 {'false_positives': 501, 'false_negatives': 2842, 'total predictions': 13564}
 
