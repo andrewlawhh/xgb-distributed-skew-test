@@ -101,17 +101,25 @@ eval-error:0.244471
 **_Categorical Skews_**
 
 **Job Skew (12 Worker Machines + 1 Tracker)**
+
 eval-error:0.244176
+
 {'false_positives': 403, 'false_negatives': 2909, 'total predictions': 13564}
 
 **Marital Skew (3 Worker Machines + 1 Tracker)**
+
 eval-error:0.246387
+
 {'false_positives': 471, 'false_negatives': 2871, 'total predictions': 13564}
 
 **Education Skew (4 Worker Machines + 1 Tracker)**
+
 eval-error:0.249705
+
 {'false_positives': 451, 'false_negatives': 2936, 'total predictions': 13564}
 
 **Contact Skew (3 Worker Machines + 1 Tracker)**
+
 eval-error:0.247051
+
 {'false_positives': 450, 'false_negatives': 2901, 'total predictions': 13564}
