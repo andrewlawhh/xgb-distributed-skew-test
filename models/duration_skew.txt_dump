@@ -278,11 +278,10 @@ booster[17]:
 	2:[duration<680] yes=5,no=6,missing=6
 		5:[duration<453] yes=11,no=12,missing=12
 			11:leaf=-0.25476414
-			12:leaf=-0.167026207
-		6:[duration<869] yes=13,no=14,missing=14
-			13:leaf=-0.0674825236
-			14:leaf=0.0306066182
-booster[18]:
+			12:leaf=-0.16702620booster[18]:
+0:[f40<359] yes=1,no=2,missing=2
+	1:[f37<0.999998987] yes=3,no=4,missing=4
+		3:[fbooster[18]:
 0:[duration<359] yes=1,no=2,missing=2
 	1:[month_10<1] yes=3,no=4,missing=4
 		3:[month_5<1] yes=7,no=8,missing=8

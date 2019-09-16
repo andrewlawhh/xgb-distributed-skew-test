@@ -15,4 +15,8 @@ python3 predict_and_eval.py ../models/campaign_skew.model;
 python3 predict_and_eval.py ../models/pdays_skew.model;
 python3 predict_and_eval.py ../models/previous_skew.model;
 python3 predict_and_eval.py ../models/poutcome_skew.model;
-
+python3 predict_and_eval.py ../models/job_skew.model;
+python3 predict_and_eval.py ../models/marital_skew.model;
+python3 predict_and_eval.py ../models/education_skew.model;
+python3 predict_and_eval.py ../models/contact_skew.model;
+python3 predict_and_eval.py ../models/month_skew.model;

@@ -283,9 +283,10 @@ booster[17]:
 		5:[pdays<85] yes=11,no=12,missing=12
 			11:leaf=0.0560479052
 			12:leaf=-0.16578947
-		6:[duration<120booster[18]:
-0:[f40<612] yes=1,no=2,missing=2
-	1:[f40<426] yes=3,no=4,missinbooster[18]:
+		6:[duration<1205] yes=13,no=14,missing=14
+			13:leaf=-0.0271259435
+			14:leaf=0.0426724143
+booster[18]:
 0:[duration<612] yes=1,no=2,missing=2
 	1:[duration<426] yes=3,no=4,missing=4
 		3:[month_5<1] yes=7,no=8,missing=8

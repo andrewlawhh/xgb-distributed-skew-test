@@ -48,5 +48,18 @@ python3 train_model.py ../data/previous-skew.csv.train previous_skew;
 ../../dmlc-core/tracker/dmlc-submit --cluster local --num-workers $1 \
 python3 train_model.py ../data/poutcome-skew.csv.train poutcome_skew;
 
+# train categorical skews
+../../dmlc-core/tracker/dmlc-submit --cluster local --num-workers 13 \
+python3 train_model.py ../data/bank-full-transformed.csv.train job_skew categorical;
 
+../../dmlc-core/tracker/dmlc-submit --cluster local --num-workers 4 \
+python3 train_model.py ../data/bank-full-transformed.csv.train marital_skew categorical;
 
+../../dmlc-core/tracker/dmlc-submit --cluster local --num-workers 5 \
+python3 train_model.py ../data/bank-full-transformed.csv.train education_skew categorical;
+
+../../dmlc-core/tracker/dmlc-submit --cluster local --num-workers 4 \
+python3 train_model.py ../data/bank-full-transformed.csv.train contact_skew categorical;
+
+../../dmlc-core/tracker/dmlc-submit --cluster local --num-workers 13 \
+python3 train_model.py ../data/bank-full-transformed.csv.train month_skew categorical;

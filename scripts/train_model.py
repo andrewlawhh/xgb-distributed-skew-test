@@ -19,26 +19,34 @@ def load_training_data(src_path, rank, num_workers):
     if num_workers == 1:
         print('not distributed - loading full training set onto singular node')
         return full_dtrain
-
     if rank == 0:
         worker_dtrain = xgb.DMatrix(np.empty((1, 45)), label=np.ones((1, 1)))
     else:
         total_rows = full_dtrain.num_row()
         rows_per_worker = total_rows // num_workers
-        
         start_dex = (rank - 1) * rows_per_worker
         end_dex = start_dex + rows_per_worker if rank != num_workers - 1 else total_rows
-
         worker_dtrain = full_dtrain.slice([i for i in range(start_dex, end_dex)])
-
-    print("Mean label value for rank", rank, "=", np.mean(worker_dtrain.get_label(), dtype=np.float64))
     return worker_dtrain
 
-def train(src_path, model_name):
+def load_training_data_categorical(rank, num_workers, model_name):
+    if rank == 0:
+        return xgb.DMatrix(np.empty((1, 45)), label=np.ones((1, 1)))
+    dataset = pd.read_csv('../data/bank-full-transformed.csv.train', delimiter=',', header=0)
+    dataset = dataset[ dataset[model_name[:-4]+str(rank)] == 1 ]
+    data, label = dataset.iloc[:,:-1], dataset.iloc[:,-1:]
+    dtrain = xgb.DMatrix(data, label=label)
+    return dtrain
+
+def train(src_path, model_name, categorical):
     rank = xgb.rabit.get_rank()
     num_workers = xgb.rabit.get_world_size()
-
-    dtrain = load_training_data(src_path, rank, num_workers)
+    if categorical:
+        print('training on categorical skew -', model_name)
+        dtrain = load_training_data_categorical(rank, num_workers, model_name)
+    else:
+        print('training on normal partition skew')
+        dtrain = load_training_data(src_path, rank, num_workers)
     params = {'max_depth': 3, # default = 6
               'alpha': 0,  # default = 0
               'lambda': 1, # default = 1
@@ -58,7 +66,10 @@ def main(argv):
     xgb.rabit.init()
     src_path = argv[1]
     model_name = argv[2]
-    train(src_path, model_name)
+    categorical = False
+    if len(argv) == 4 and argv[3] == 'categorical':
+        categorical = True
+    train(src_path, model_name, categorical)
     xgb.rabit.finalize()
 
 if __name__ == '__main__':

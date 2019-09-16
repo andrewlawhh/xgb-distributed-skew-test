@@ -284,116 +284,113 @@ booster[17]:
 			11:leaf=0.0197560973
 			12:leaf=-0.0489296652
 		6:[marital_1<1] yes=13,no=14,missing=14
-			13:leaf=0.092836678
-			14:leaf=0.0241014827
-booster[18]:
-0:[duration<79] yes=1,no=2,missing=2
-	1:[month_9<1] yes=3,no=4,missing=4
-		3:[age<24] yes=7,no=8,missing=8
+			1booster[18]:
+0:[f40<79] yes=1,no=2,missing=2
+	1:[f36<0.999998987] yes=3,no=4,missing=4
+		3:[f0<23.9999981] yes=7,no=8,missing=8
 			7:leaf=-0
 			8:leaf=-0.29787451
 		4:leaf=0.257142872
-	2:[duration<491] yes=5,no=6,missing=6
-		5:[month_9<1] yes=9,no=10,missing=10
+	2:[f40<491] yes=5,no=6,missing=6
+		5:[f36<0.999998987] yes=9,no=10,missing=10
 			9:leaf=0.0522540994
 			10:leaf=0.276646703
-		6:[duration<584] yes=11,no=12,missing=12
+		6:[f40<584] yes=11,no=12,missing=12
 			11:leaf=-0.18858026
 			12:leaf=-0.0215277784
 booster[19]:
-0:[duration<376] yes=1,no=2,missing=2
-	1:[month_4<1] yes=3,no=4,missing=4
-		3:[day<10] yes=7,no=8,missing=8
+0:[f40<376] yes=1,no=2,missing=2
+	1:[f31<0.999998987] yes=3,no=4,missing=4
+		3:[f27<9.99999905] yes=7,no=8,missing=8
 			7:leaf=-0.25261867
 			8:leaf=0.0444134101
-		4:[duration<348] yes=9,no=10,missing=10
+		4:[f40<348] yes=9,no=10,missing=10
 			9:leaf=-0.298321575
 			10:leaf=-0.182608694
-	2:[month_2<1] yes=5,no=6,missing=6
-		5:[month_8<1] yes=11,no=12,missing=12
+	2:[f29<0.999998987] yes=5,no=6,missing=6
+		5:[f35<0.999998987] yes=11,no=12,missing=12
 			11:leaf=-0.0172599349
 			12:leaf=-0.126315802
-		6:[duration<678] yes=13,no=14,missing=14
+		6:[f40<678] yes=13,no=14,missing=14
 			13:leaf=0.232894748
 			14:leaf=0.00797872432
 booster[20]:
-0:[duration<337] yes=1,no=2,missing=2
-	1:[month_10<1] yes=3,no=4,missing=4
-		3:[day<10] yes=7,no=8,missing=8
+0:[f40<337] yes=1,no=2,missing=2
+	1:[f37<0.999998987] yes=3,no=4,missing=4
+		3:[f27<9.99999905] yes=7,no=8,missing=8
 			7:leaf=0.296052635
 			8:leaf=0.168472916
-		4:[day<13] yes=9,no=10,missing=10
+		4:[f27<12.999999] yes=9,no=10,missing=10
 			9:leaf=0.0159574486
 			10:leaf=-0.172058836
-	2:[month_2<1] yes=5,no=6,missing=6
-		5:[pdays<110] yes=11,no=12,missing=12
+	2:[f29<0.999998987] yes=5,no=6,missing=6
+		5:[f42<110] yes=11,no=12,missing=12
 			11:leaf=-0.00357294781
 			12:leaf=-0.108387105
-		6:[duration<676] yes=13,no=14,missing=14
+		6:[f40<676] yes=13,no=14,missing=14
 			13:leaf=-0.170192316
 			14:leaf=0.00473684212
 booster[21]:
-0:[duration<345] yes=1,no=2,missing=2
-	1:[month_10<1] yes=3,no=4,missing=4
-		3:[month_5<1] yes=7,no=8,missing=8
+0:[f40<345] yes=1,no=2,missing=2
+	1:[f37<0.999998987] yes=3,no=4,missing=4
+		3:[f32<0.999998987] yes=7,no=8,missing=8
 			7:leaf=-0.289268523
 			8:leaf=0.0485294163
-		4:[day<13] yes=9,no=10,missing=10
+		4:[f27<12.999999] yes=9,no=10,missing=10
 			9:leaf=0.0159574486
 			10:leaf=-0.157377049
-	2:[pdays<110] yes=5,no=6,missing=6
-		5:[age<61] yes=11,no=12,missing=12
+	2:[f42<110] yes=5,no=6,missing=6
+		5:[f0<61] yes=11,no=12,missing=12
 			11:leaf=-0.0121816173
 			12:leaf=0.168000013
-		6:[poutcome<0.999998987] yes=13,no=14,missing=13
+		6:[f44<0.999998987] yes=13,no=14,missing=13
 			13:leaf=-0.109701492
 			14:leaf=0.150000006
 booster[22]:
-0:[duration<341] yes=1,no=2,missing=2
-	1:[month_10<1] yes=3,no=4,missing=4
-		3:[duration<79] yes=7,no=8,missing=8
+0:[f40<341] yes=1,no=2,missing=2
+	1:[f37<0.999998987] yes=3,no=4,missing=4
+		3:[f40<79] yes=7,no=8,missing=8
 			7:leaf=-0.0827586204
 			8:leaf=0.200743511
-		4:[duration<106] yes=9,no=10,missing=10
+		4:[f40<106] yes=9,no=10,missing=10
 			9:leaf=-0.132692307
 			10:leaf=0.0511627942
-	2:[day<6] yes=5,no=6,missing=6
-		5:[month_10<1] yes=11,no=12,missing=12
+	2:[f27<5.99999905] yes=5,no=6,missing=6
+		5:[f37<0.999998987] yes=11,no=12,missing=12
 			11:leaf=-0.0609699786
 			12:leaf=0.270000011
-		6:[duration<355] yes=13,no=14,missing=14
+		6:[f40<355] yes=13,no=14,missing=14
 			13:leaf=-0.184615403
 			14:leaf=-0.00163590617
 booster[23]:
-0:[duration<352] yes=1,no=2,missing=2
-	1:[month_10<1] yes=3,no=4,missing=4
-		3:[month_5<1] yes=7,no=8,missing=8
+0:[f40<352] yes=1,no=2,missing=2
+	1:[f37<0.999998987] yes=3,no=4,missing=4
+		3:[f32<0.999998987] yes=7,no=8,missing=8
 			7:leaf=-0.28823474
 			8:leaf=0.0485294163
-		4:[age<29] yes=9,no=10,missing=10
+		4:[f0<28.9999981] yes=9,no=10,missing=10
 			9:leaf=-0.126923084
 			10:leaf=0.0616071485
-	2:[duration<543] yes=5,no=6,missing=6
-		5:[day<7] yes=11,no=12,missing=12
+	2:[f40<543] yes=5,no=6,missing=6
+		5:[f27<6.99999905] yes=11,no=12,missing=12
 			11:leaf=-0.0694214925
 			12:leaf=0.0781163424
-		6:[pdays<113] yes=13,no=14,missing=14
+		6:[f42<113] yes=13,no=14,missing=14
 			13:leaf=-0.00615875935
 			14:leaf=-0.0950495079
 booster[24]:
-0:[duration<352] yes=1,no=2,missing=2
-	1:[month_10<1] yes=3,no=4,missing=4
-		3:[duration<132] yes=7,no=8,missing=8
+0:[f40<352] yes=1,no=2,missing=2
+	1:[f37<0.999998987] yes=3,no=4,missing=4
+		3:[f40<132] yes=7,no=8,missing=8
 			7:leaf=0.0443181805
 			8:leaf=0.229493096
-		4:[campaign<5] yes=9,no=10,missing=10
+		4:[f41<4.99999905] yes=9,no=10,missing=10
 			9:leaf=-0.0184210539
 			10:leaf=-0.230769247
-	2:[duration<645] yes=5,no=6,missing=6
-		5:[day<7] yes=11,no=12,missing=12
+	2:[f40<645] yes=5,no=6,missing=6
+		5:[f27<6.99999905] yes=11,no=12,missing=12
 			11:leaf=0.0483221486
 			12:leaf=-0.0865221545
-		6:[month_4<1] yes=13,no=14,missing=14
+		6:[f31<0.999998987] yes=13,no=14,missing=14
 			13:leaf=-0.0130012948
 			14:leaf=0.0543689318
-=0.0543689318
